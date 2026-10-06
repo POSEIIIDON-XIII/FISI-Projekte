@@ -57,10 +57,12 @@ while True:
 
 
 if modus == 1:
-    try:
-        modus_1 = int(input("Welche Dezimalzahl möchtest du umrechnen? "))
-    except ValueError:
-        print("Ungültige Eingabe! Bitte verwende nur Zahlen.")
+    while True:
+        try:
+            modus_1 = int(input("Welche Dezimalzahl möchtest du umrechnen? "))
+            break
+        except ValueError:
+            print("Ungültige Eingabe! Bitte verwende nur Zahlen.")
 
 
     ergebnis = binaer_formatieren(dezimal_zu_binaer(modus_1))

@@ -1,16 +1,10 @@
-"""
-1101
-Start bei 1
-Das bisherige Ergebnis wird verdoppelt und anschließend das nächste Binärbit addiert.
-
-Zu Beginn sind zwei Variablen zu erwarten:
-ergebnis = ...
-und
-für jedes Zeichen im Binärstring: ...
-"""
-
 binaer = "1101"
-ergebnis = 0
 
-for ziffer in binaer:
-    ergebnis = ergebnis * 2 + int(ziffer)
+def binaer_zu_dezimal(binaer):
+    ergebnis = 0
+    for ziffer in binaer:
+        ergebnis = ergebnis * 2 + int(ziffer)
+    return ergebnis
+
+ergebnis = binaer_zu_dezimal("1101")
+print(ergebnis)
